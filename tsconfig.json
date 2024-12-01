@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "types": ["node"],
+    "module": "commonjs",
+    "baseUrl": "./",
+    "outDir": "./build",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "paths": {
+      "@controllers/*": [
+        "src/controllers/*"
+      ],
+      "@validators/*": [
+        "src/validators/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@middleware/*": [
+        "src/middleware/*"
+      ],
+      "*": ["node_modules/*", "src/types/*"]
+    },
+  },
+  "ts-node": {
+    "esm": true
+  },
+}

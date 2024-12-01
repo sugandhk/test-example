@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "builds": [
+      {
+          "src": "./index.ts",
+          "use": "@vercel/node",
+          "config": {
+            "includeFiles": ["build/**"]
+          }
+      }
+  ],
+  "routes": [
+    { "src": "/api/stripe-create-checkout-session", "dest": "index.ts" }
+  ]
+}
